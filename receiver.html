@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Blood - Blood Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <img src="blood-donation-logo-removebg.png" alt="Blood Finder Logo" class="logo">
+        <h1>Blood Finder</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="donor.html">Become a Donor</a></li>
+            <li><a href="receiver.html">Find Blood</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <form id="receiver-form">
+            <h2>Find Blood</h2>
+            <label for="search-blood-type">Blood Type:</label>
+            <select id="search-blood-type" name="search-blood-type" required>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+            </select>
+            
+            <button type="submit">Search</button>
+        </form>
+        <div id="results"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
