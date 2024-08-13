@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Buddy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gray-100">
+    <header class="bg-red-600 text-white p-4">
+        <div class="container mx-auto">
+            <h1 class="text-3xl font-bold ">Blood Buddy</h1>
+            <nav class="mt-2">
+                <ul class="flex space-x-10">
+                    <li><a href="#" class="hover:underline">Home</a></li>
+                    <li><a href="#" class="hover:underline">Doner Registration Form</a></li>
+                    <li><a href="#" class="hover:underline">Blood Center</a></li>
+                    <li><a href="#" class="hover:underline">Find BLood Near You</a></li>
+                    <li><a href="#" class="hover:underline">Gallery</a></li>
+                    <li><a href="#" class="hover:underline">Upcoming Camps</a></li>
+                    <li><a href="#" class="hover:underline">Feedback</a></li>
+                    <li><a href="contact.html" class="hover:underline">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>  
+
+    <main class="container mx-auto p-6 bg-white shadow-lg mt-6">
+        <section>
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-4">Blood Donors Registration Form</h2>
+            <p class="text-center text-gray-600 mb-6">Please provide the required details as all fields are mandatory.</p>
+
+            <form action="#" method="POST" class="space-y-8">
+                <!-- Personal Details Section -->
+                <section>
+                    <h3 class="text-2xl font-bold text-red-600 mb-4">Personal Details</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <!-- Donor's Name -->
+                        <div>
+                            <label for="firstName" class="block text-gray-700 font-medium">Donor's Name*</label>
+                            <div class="mt-2 flex space-x-2">
+                                <input type="text" id="firstName" name="firstName" placeholder="First Name" class="w-full p-2 border rounded-md">
+                                <input type="text" id="middleName" name="middleName" placeholder="Middle Name" class="w-full p-2 border rounded-md">
+                                <input type="text" id="lastName" name="lastName" placeholder="Last Name" class="w-full p-2 border rounded-md">
+                            </div>
+                        </div>
+
+                        <!-- Date of Birth -->
+                        <div>
+                            <label for="dob" class="block text-gray-700 font-medium">Date of Birth*</label>
+                            <input type="date" id="dob" name="dob" class="w-full p-2 border rounded-md mt-2">
+                        </div>
+
+                        <!-- Age -->
+                        <div>
+                            <label for="age" class="block text-gray-700 font-medium">Age*</label>
+                            <input type="number" id="age" name="age" placeholder="Age" class="w-full p-2 border rounded-md mt-2">
+                        </div>
+
+                        <!-- Gender -->
+                        <div>
+                            <label for="gender" class="block text-gray-700 font-medium">Gender*</label>
+                            <select id="gender" name="gender" class="w-full p-2 border rounded-md mt-2">
+                                <option>--Select--</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                        <!-- Email -->
+                        <div>
+                            <label for="email" class="block text-gray-700 font-medium">Email*</label>
+                            <input type="email" id="email" name="email" placeholder="Please Write Your Valid Email" class="w-full p-2 border rounded-md mt-2">
+                        </div>
+
+                        <!-- Mobile No. -->
+                        <div>
+                            <label for="mobile" class="block text-gray-700 font-medium">Mobile No.*</label>
+                            <input type="tel" id="mobile" name="mobile" placeholder="Please Write Your Valid Mobile No" class="w-full p-2 border rounded-md mt-2">
+                        </div>
+
+                        <!-- Phone No. -->
+                        <div>
+                            <label for="phone" class="block text-gray-700 font-medium">Phone No.</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Please Write Your Valid Phone No." class="w-full p-2 border rounded-md mt-2">
+                        </div>
+
+                        <!-- ID Proof -->
+                        <div>
+                            <label for="idProof" class="block text-gray-700 font-medium">Id Proof</label>
+                            <input type="file" id="idProof" name="idProof" class="w-full p-2 border rounded-md mt-2">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contact Details Section -->
+                <section>
+                    <h3 class="text-2xl font-bold text-red-600 mb-4">Contact Details</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Address Line 1 -->
+                        <div>
+                            <label for="addressLine1" class="block text-gray-700 font-medium">Address Line 1*</label>
+                            <input type="text" id="addressLine1" name="addressLine1" placeholder="Please Write Your Valid Address" class="w-full p-2 border rounded-md mt-2">
+                        </div>
+
+                        <!-- Address Line 2 -->
+                        <div>
+                            <label for="addressLine2" class="block text-gray-700 font-medium">Address Line 2</label>
+                            <input type="text" id="addressLine2" name="addressLine2" placeholder="Please Write Your Valid Address" class="w-full p-2 border rounded-md mt-2">
+                        </div>
+
+                        <!-- Address Line 3 -->
+                        <div>
+                            <label for="addressLine3" class="block text-gray-700 font-medium">Address Line 3</label>
+                            <input type="text" id="addressLine3" name="addressLine3" placeholder="Please Write Your Valid Address" class="w-full p-2 border rounded-md mt-2">
+                        </div>
+
+                        <!-- District -->
+                        <div>
+                            <label for="district" class="block text-gray-700 font-medium">District*</label>
+                            <select id="district" name="district" class="w-full p-2 border rounded-md mt-2">
+                                <option>--Select--</option>
+                            </select>
+                        </div>
+
+                        <!-- Pin Code -->
+                        <div>
+                            <label for="pinCode" class="block text-gray-700 font-medium">Pin Code</label>
+                            <input type="text" id="pinCode" name="pinCode" placeholder="Pin Code" class="w-full p-2 border rounded-md mt-2">
+                        </div>
+
+                        <!-- Preferred Means of Contact -->
+                        <div>
+                            <label for="preferredContact" class="block text-gray-700 font-medium">Preferred Means of Contact</label>
+                            <select id="preferredContact" name="preferredContact" class="w-full p-2 border rounded-md mt-2">
+                                <option>--Select--</option>
+                                <option>Email</option>
+                                <option>Phone</option>
+                                <option>SMS</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Special Instruction -->
+                    <div class="mt-4">
+                        <label for="specialInstruction" class="block text-gray-700 font-medium">Special Instruction</label>
+                        <div class="mt-2">
+                            <input type="radio" name="dnd" id="night" value="night" class="mr-2">
+                            <label for="night" class="text-gray-700">At Night</label><br>
+                            <input type="radio" name="dnd" id="officeHours" value="officeHours" class="mr-2">
+                            <label for="officeHours" class="text-gray-700">Only Weekend</label><br>
+                            <input type="radio" name="dnd" id="manualTimings" value="manualTimings" class="mr-2">
+                            <label for="manualTimings" class="text-gray-700">Weekdays Only</label><br>
+                            <input type="radio" name="dnd" id="otherInstruction" value="otherInstruction" class="mr-2">
+                            <label for="otherInstruction" class="text-gray-700">Other Instruction If Any</label>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Other Information Section -->
+                <section>
+                    <h3 class="text-2xl font-bold text-red-600 mb-4">Other Information</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <!-- Have You Donated Previously -->
+                        <div>
+                            <label for="donatedBefore" class="block text-gray-700 font-medium">Have You Donated Previously*</label>
+                            <div class="mt-2">
+                                <input type="radio" name="donatedBefore" id="yes" value="yes" class="mr-2">
+                                <label for="yes" class="text-gray-700">Yes</label><br>
+                                <input type="radio" name="donatedBefore" id="no" value="no" class="mr-2">
+                                <label for="no" class="text-gray-700">No</label>
+                            </div>
+                        </div>
+
+                        <!-- Your Blood Group -->
+                        <div>
+                            <label for="bloodGroup" class="block text-gray-700 font-medium">Your Blood Group*</label>
+                            <select id="bloodGroup" name="bloodGroup" class="w-full p-2 border rounded-md mt-2">
+                                <option>--Select--</option>
+                                <option>A+</option>
+                                <option>A-</option>
+                                <option>B+</option>
+                                <option>B-</option>
+                                <option>O+</option>
+                                <option>O-</option>
+                                <option>AB+</option>
+                                <option>AB-</option>
+                            </select>
+                        </div>
+
+                        <!-- Do You Know Your Haemoglobin Count -->
+                        <div>
+                            <label for="haemoglobinCount" class="block text-gray-700 font-medium">Do You Know Your Haemoglobin Count?</label>
+                            <select id="haemoglobinCount" name="haemoglobinCount" class="w-full p-2 border rounded-md mt-2">
+                                <option>--Select--</option>
+                            </select>
+                        </div>
+
+                        <!-- Do You Know Your Weight -->
+                        <div>
+                            <label for="weight" class="block text-gray-700 font-medium">Do You Know Your Weight?*</label>
+                            <input id="weight" placeholder="Enter your weight" name="weight" class="w-full p-2 border rounded-md mt-2">
+
+                        </div>
+
+                        <!-- Name of the Blood Center -->
+                        <div>
+                            <label for="bloodCenter" class="block text-gray-700 font-medium">Name of the Blood Center you want to be associated with</label>
+                            <select id="bloodCenter" name="bloodCenter" class="w-full p-2 border rounded-md mt-2">
+                                <option>--Select--</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="flex justify-end mt-6">
+                    <button type="submit" class="bg-red-600 text-white py-2 px-4 rounded-md hover:bg-red-700">Submit</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
