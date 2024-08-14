@@ -32,7 +32,8 @@
             <h2 class="text-4xl font-bold text-center text-gray-800 mb-4">Blood Donors Registration Form</h2>
             <p class="text-center text-gray-600 mb-6">Please provide the required details as all fields are mandatory.</p>
 
-            <form action="#" method="POST" class="space-y-8">
+            <form id="donor-form" method="POST" class="space-y-8">
+            <form action="#" class="form"></form>
                 <!-- Personal Details Section -->
                 <section>
                     <h3 class="text-2xl font-bold text-red-600 mb-4">Personal Details</h3>
@@ -123,6 +124,7 @@
                             <label for="district" class="block text-gray-700 font-medium">District*</label>
                             <select id="district" name="district" class="w-full p-2 border rounded-md mt-2">
                                 <option>--Select--</option>
+                                <option>Nanded</option>
                             </select>
                         </div>
 
@@ -217,7 +219,7 @@
                 </section>
 
                 <div class="flex justify-end mt-6">
-                    <button type="submit" class="bg-red-600 text-white py-2 px-4 rounded-md hover:bg-red-700">Submit</button>
+                    <button type="submit" id="sumbit1" class="bg-red-600 text-white py-2 px-4 rounded-md hover:bg-red-700">Submit</button>
                 </div>
             </form>
         </section>
