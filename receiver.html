@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Finder</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            padding: 20px;
+        }
+        #h1F {
+            color: #c0392b;
+            text-align: center;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #c0392b;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #e74c3c;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+   
+      
+    <header class="bg-red-600 text-white p-4">
+        <div class="container mx-auto">
+            <h1 class="text-3xl font-bold ">Blood Buddy</h1>
+            <nav class="mt-2 flex w-screen justify-center items-center text-center">
+                <ul class="flex space-x-10">
+                    <li><a href="#" class="hover:underline">Home</a></li>
+                    <li><a href="donor.html" class="hover:underline">Donor Registration Form</a></li>
+                    <li><a href="center.html" class="hover:underline">Blood Center</a></li>
+                    <li><a href="receiver.html" class="hover:underline">Find BLood Near You</a></li>
+                    <li><a href="#" class="hover:underline">Gallery</a></li>
+                    <li><a href="camps.html" class="hover:underline"> Camps</a></li>
+                    <li><a href="comic.html" class="hover:underline">Comic</li>
+                    <li><a href="contact.html" class="hover:underline">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <h1 id="h1F">Find Blood Donors</h1>
+
+    <form id="bloodFinderForm">
+        <label for="bloodType">Select Blood Type:</label>
+        <select id="bloodType" name="bloodType" required>
+            <option value="">Choose your blood type</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+        </select>
+
+        <button type="submit">Find Donors</button>
+    </form>
+
+    <script>
+        document.getElementById('bloodFinderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const bloodType = document.getElementById('bloodType').value;
+
+            if (bloodType) {
+                // Redirect to the page corresponding to the selected blood type
+                window.location.href = `${bloodType.replace('+', 'plus').replace('-', 'minus')}.html`;
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Buddy</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            padding: 20px;
+        }
+        #h2D {
+            color: #c0392b;
+            text-align: center;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #c0392b;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e74c3c;
+        }
+        .message {
+            color: green;
+            margin-top: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+   <div id="heading"> <header class="bg-red-600 text-white p-4">
+        <div class="container mx-auto">
+            <h1 class="text-3xl font-bold ">Blood Buddy</h1>
+            <nav class="mt-2 flex w-screen justify-center items-center text-center">
+                <ul class="flex space-x-10">
+                    <li><a href="home.html" class="hover:underline">Home</a></li>
+                    <li><a href="donor.html" class="hover:underline">Donor Registration Form</a></li>
+                    <li><a href="center.html" class="hover:underline">Blood Center</a></li>
+                    <li><a href="receiver.html" class="hover:underline">Find BLood Near You</a></li>
+                    <li><a href="#" class="hover:underline">Gallery</a></li>
+                    <li><a href="camps.html" class="hover:underline"> Camps</a></li>
+                    <li><a href="comic.html" class="hover:underline">Comic</a></li>
+                    <li><a href="contact.html" class="hover:underline">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>  
+</div>
+    
+
+
+ 
+
+    <form id="donorForm">
+        <h2 id="h2D">Personal Details</h2>
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+
+        <label for="dob">Date Of Birth:</label>
+        <input type="date" id="dob" name="dob" placeholder="Enter Your Date Of Birth" required>
+
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" placeholder="Enter your age" required>
+
+        <label for="gender">Gender:</label>
+       <select id="gender" name="gender" required>
+            <option value="">Select your gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+
+        <label for="bloodType">Blood Type:</label>
+        <select id="bloodType" name="bloodType" required>
+            <option value="">Select your blood type</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+        </select>
+
+        <h2>Contact Details</h2>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+        <label for="Address">Address:</label>
+        <input type="text" id="address" name="address" placeholder="Enter your address" required>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" placeholder="Enter your city or town" required>
+    
+
+        <h2>More Information</h2>
+        <label for="dnd">Dont want to distrubed between (DND)</label>
+        <select id="dnd" name="dnd" required>
+            <option value="">Select DND</option>
+            <option value="night">At Night</option>
+            <option value="only weekend">Only Weekend</option>
+            <option value="only weekdays">Only Weekdays</option>
+        </select>
+
+        <button type="submit">Save</button>
+        <button type="reset">Reset</button>
+
+        <div class="message" id="message"></div>
+    </form>
+
+    <script>
+        document.getElementById('donorForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Get form values
+            const fullName = document.getElementById('fullName').value;
+            const DOB = document.getElementById('dob').value;
+            const Age = document.getElementById('age').value;
+            const Gender = document.getElementById('gender').value;
+            const bloodType = document.getElementById('bloodType').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const Address=document.getElementById('address').value;
+            const location = document.getElementById('location').value;
+            const Do_not_distrubed = document.getElementById('dnd').value;
+
+            // Create donor object
+            const donor = {
+                fullName,
+                DOB,
+                Age,
+                Gender,
+                bloodType,
+                email,
+                phone,
+                Address,
+                location,
+                Do_not_distrubed
+            };
+
+            // Save donor data to localStorage
+            let donors = JSON.parse(localStorage.getItem('donors')) || [];
+            donors.push(donor);
+            localStorage.setItem('donors', JSON.stringify(donors));
+
+            // Show success message
+            document.getElementById('message').textContent = 'Donor information saved successfully!';
+            setTimeout(() => {
+                document.getElementById('message').textContent = '';
+            }, 3000);
+
+            // Reset form
+            document.getElementById('donorForm').reset();
+        });
+    </script>
+
+</body>
+</html>
+

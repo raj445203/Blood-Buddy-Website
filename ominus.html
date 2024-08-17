@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Finder - Blood Centers</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #c0392b;
+        color: white;
+    }
+</style>
+</head>
+<body class="bg-gray-100">
+
+   
+      
+    <header class="bg-red-600 text-white p-4">
+        <div class="container mx-auto">
+            <h1 class="text-3xl font-bold ">Blood Buddy</h1>
+            <nav class="mt-2 flex w-screen justify-center items-center text-center">
+                <ul class="flex space-x-10">
+                    <li><a href="donor.html" class="hover:underline">Home</a></li>
+                    <li><a href="donor.html" class="hover:underline">Donor Registration Form</a></li>
+                    <li><a href="center.html" class="hover:underline">Blood Center</a></li>
+                    <li><a href="receiver.html" class="hover:underline">Find BLood Near You</a></li>
+                    <li><a href="#" class="hover:underline">Gallery</a></li>
+                    <li><a href="camps.html" class="hover:underline"> Camps</a></li>
+                    <li><a href="comic.html" class="hover:underline">Comic</a></li>
+                    <li><a href="contact.html" class="hover:underline">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <h1>O- Blood Donors</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>DOB</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Location</th>
+                <th>Do not distrubed</th>
+            </tr>
+        </thead>
+        <tbody id="donorList">
+            <!-- Donor data will be inserted here -->
+        </tbody>
+    </table>
+
+
+    <script>
+        // Retrieve donors from localStorage
+        const donors = JSON.parse(localStorage.getItem('donors')) || [];
+
+        const donorList = document.getElementById('donorList');
+
+        // Filter donors by blood type and display them in the table
+        donors.filter(donor => donor.bloodType === 'O-').forEach(donor => {
+            const row = document.createElement('tr');
+
+            row.innerHTML = `
+                <td>${donor.fullName}</td>
+                <td>${donor.DOB}</td>
+                <td>${donor.Age}</td>
+                <td>${donor.Gender}</td>
+                <td>${donor.email}</td>
+                <td>${donor.phone}</td>
+                <td>${donor.Address}</td>
+                <td>${donor.location}</td>
+                <td>${donor.Do_not_distrubed}</td>
+            `;
+
+            donorList.appendChild(row);
+        });
+    </script>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
