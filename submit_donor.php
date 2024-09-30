@@ -1,4 +1,3 @@
-
 <?php
 $insert = false;
 
@@ -57,7 +56,7 @@ $conn->close();
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', serif;
             background-color: #f8f8f8;
             /* padding: 20px; */
         }
@@ -119,10 +118,10 @@ $conn->close();
             <nav class="hidden md:flex mt-2 space-x-10">
                 <ul class="flex space-x-6">
                     <li><a href="home.html" class="hover:underline">Home</a></li>
-                    <li><a href="submit_donor.php" class="hover:underline">Donor Registration Form</a></li>
+                    <li><a href="submit_donor.php" class="hover:underline">Donor Registration </a></li>
                     <li><a href="center.html" class="hover:underline">Blood Center</a></li>
-                    <li><a href="receiver.html" class="hover:underline">Find Blood Near You</a></li>
-                    <li><a href="#" class="hover:underline">Gallery</a></li>
+                    <li><a href="receiver.html" class="hover:underline">Find Blood </a></li>
+                   
                     <li><a href="camps.html" class="hover:underline">Camps</a></li>
                     <li><a href="comic.html" class="hover:underline">Comic</a></li>
                     <li><a href="contact.html" class="hover:underline">Contact Us</a></li>
@@ -137,10 +136,10 @@ $conn->close();
         <div id="mobile-menu" class="md:hidden hidden mt-2">
             <ul class="flex flex-col space-y-4">
                 <li><a href="home.html" class="hover:underline">Home</a></li>
-                <li><a href="donor.html" class="hover:underline">Donor Registration Form</a></li>
+                <li><a href="submit_donor.html" class="hover:underline">Donor Registration </a></li>
                 <li><a href="center.html" class="hover:underline">Blood Center</a></li>
-                <li><a href="receiver.html" class="hover:underline">Find Blood Near You</a></li>
-                <li><a href="#" class="hover:underline">Gallery</a></li>
+                <li><a href="receiver.html" class="hover:underline">Find Blood </a></li>
+                
                 <li><a href="camps.html" class="hover:underline">Camps</a></li>
                 <li><a href="comic.html" class="hover:underline">Comic</a></li>
                 <li><a href="contact.html" class="hover:underline">Contact Us</a></li>
@@ -236,4 +235,3 @@ $conn->close();
 
 </body>
 </html>
-
